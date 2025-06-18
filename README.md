@@ -425,5 +425,5 @@ sudo ln -sf /opt/popcache/pop /usr/local/bin/pop
 If U have any issue then open a issue on this repo or Dm me on TG~ @Babacarson
 
 
-👉 Join TG for more Updates: [https://telegram.me/cryptogg](https://t.me/weekshit_show)
+👉 Join TG for more Updates: (https://t.me/weekshit_show)
 

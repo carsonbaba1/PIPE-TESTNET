@@ -1,25 +1,27 @@
 <div align="left">
 
-# PIPE-TESTNET
+#  **Introduction** 📔
 
-<div align="left">
-
-#  **🔹 What is PIPE Testnet?** 
-
-**The PIPE Testnet is a decentralized storage and data availability network where users can run nodes and help test the system before the mainnet launch.**
+</div>
 
 
-
+**Pipe Network is transforming media streaming with a decentralized Content Delivery Network (CDN) on Solana’s high-performance blockchain. This secure, scalable, and hyper-localized solution enables permissionless contributors to deploy Points of Presence (PoPs) in targeted regions, ensuring lightning-fast access to high-quality media and real-time applications.**
 
 
 
 
 
 <div align="center">
+
 # 👨🏻‍💻 **Pipe-Testnet-Node-Guide** 👨🏻‍💻
 
+![image](https://github.com/user-attachments/assets/47cbe79e-e6ee-43e2-98cc-2543c524fe08)
+
+
+</div>
 
 # 🖥️ Device/System Requirements 
+
 
 ![Screenshot 2025-05-17 004130](https://github.com/user-attachments/assets/d5dbeabf-d78b-4d0c-a9dc-bd4cf77c3162)
 
@@ -32,13 +34,13 @@
 
 * Fill this form if u have not rcvd the mail/invite code Yet- [Form](https://tinyurl.com/4435uukt)
 
-
-
-# Install All Require Dependecies
+# Install Require Dependecies
 
 ```
 sudo apt-get update && sudo apt-get upgrade -y
 ```
+
+* Other Packages
 
 ```
 sudo apt install curl iptables build-essential git wget lz4 jq make gcc nano automake autoconf tmux htop nvme-cli libgbm1 pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev screen ufw -y
@@ -54,7 +56,6 @@ sudo ufw allow ssh
 sudo ufw enable
 sudo ufw reload
 ```
-
 
 # Applying Configurations
 
@@ -76,6 +77,8 @@ EOL'
 sudo sysctl -p /etc/sysctl.d/99-popcache.conf
 ```
 
+* Increase file limits for performance
+
 ```
 sudo bash -c 'cat > /etc/security/limits.d/popcache.conf << EOL
 *    hard nofile 65535
@@ -83,12 +86,14 @@ sudo bash -c 'cat > /etc/security/limits.d/popcache.conf << EOL
 EOL'
 ```
 
+
 # Create Directories
 
 ```
 sudo mkdir -p /opt/popcache
 sudo mkdir -p /opt/popcache/logs
 ```
+
 
 <div align="center">
 
@@ -118,7 +123,6 @@ sudo mkdir -p /opt/popcache/logs
 
 <div align="center">
 
-
 # Here are some steps, how u can move pop binary to vps 
 
 </div>
@@ -133,8 +137,6 @@ sudo mkdir -p /opt/popcache/logs
 * 4. Drag and drop your pop binary file to your Left screen To Right VPS's Home path. 
 
 * 5. Now move & Unrap the pop file with following these commands!
-
-
 
 ```
 sudo mv ~/pop-v0.3.2-linux-x64.tar.gz /opt/popcache/
@@ -151,7 +153,9 @@ chmod 777 pop-v0.3.2-linux-x64.tar.gz
 sudo ln -sf /opt/popcache/pop /usr/local/bin/pop
 ```
 
+
 # Set Configuration File
+
 
 ```
 sudo nano config.json
@@ -190,7 +194,6 @@ sudo nano config.json
   }
 }
 ```
-
 
 * Paste the following code in `config.json` File-
 
@@ -248,7 +251,8 @@ sudo systemctl enable popcache
 sudo systemctl start popcache
 ```
 
-# Managing Logs ⛓
+
+# Managing Logs ⛓️‍💥
 
 * Check node Status
 
@@ -258,6 +262,7 @@ sudo systemctl status popcache
 
 ![Screenshot 2025-05-27 190436](https://github.com/user-attachments/assets/719cce62-977c-4730-856a-c9325d316a09)
 
+
 ```
 tail -f /opt/popcache/logs/stdout.log
 ```
@@ -265,6 +270,7 @@ tail -f /opt/popcache/logs/stdout.log
 * This will show something like that👇
 
 ![image](https://github.com/user-attachments/assets/f1e3e7b7-f7ee-4fae-a0bd-46653dde9c2c)
+
 
 
 # Get pop_id & more info
@@ -292,12 +298,14 @@ https://dashboard.testnet.pipe.network/node/
 sudo systemctl stop popcache
 ```
 
-
 # Next day command for local pc
 
 ```
 sudo systemctl restart popcache
 ```
+
+
+
 
 <div align="center">
 
@@ -306,7 +314,8 @@ sudo systemctl restart popcache
 ![image](https://github.com/user-attachments/assets/0cec40ba-dbe3-4f53-92f8-f99b6104cc66)
 
 
-</div>
+
+</div
 
 
 * Stop popcache service
@@ -315,11 +324,12 @@ sudo systemctl restart popcache
 sudo systemctl stop popcache
 ```
 
+* Delete old binary 
+
 ```
 sudo rm -f /usr/local/bin/pop
 
 ```
-
 ```
 sudo rm -f /opt/popcache/pop
 ```
@@ -363,9 +373,13 @@ sudo systemctl restart popcache
 
 ![image](https://github.com/user-attachments/assets/9fc6e18a-db3a-4fea-811f-efaad545b16f)
 
+
+
+
 <div align="center">
 
 # 🏃 Path where u need to move `pop-v0.3.2-linux-x64.tar.gz` for LOCAL PC 🏃
+
 
 </div
 
@@ -381,11 +395,11 @@ sudo systemctl restart popcache
 
 https://github.com/user-attachments/assets/2a932bfc-df13-4c73-816a-f0297f244b92
 
-**Video Refrence-** 👇
 
 
-https://github.com/user-attachments/assets/2a932bfc-df13-4c73-816a-f0297f244b92
+* After paste the `pop-v0.3.2-linux-x64.tar.gz` file to your wsl path, **follow the process to unzip & move**:
 
+ 
 ```
 sudo mv ~/pop-v0.3.2-linux-x64.tar.gz /opt/popcache/
 ```
@@ -394,7 +408,6 @@ sudo mv ~/pop-v0.3.2-linux-x64.tar.gz /opt/popcache/
 cd /opt/popcache/
 ```
 
-
 ```
 sudo tar -xzf pop-v0.3.2-linux-x64.tar.gz
 sudo chmod +x ./pop
@@ -402,17 +415,12 @@ chmod 777 pop-v0.3.2-linux-x64.tar.gz
 sudo ln -sf /opt/popcache/pop /usr/local/bin/pop
 ```
 
-* **After that follow all steps from** [Set Configuration File](https://github.com/Mayankgg01/Pipe-Testnet-Node-Guide?tab=readme-ov-file#set-configuration-file)
+* **After that follow all steps from** [Set Configuration File]([(https://github.com/carsonbaba1/PIPE-TESTNET/tree/main))
+
+
 
 If U have any issue then open a issue on this repo or Dm me on TG~ @Babacarson
-JOIN TG CHANNEL - https://t.me/weekshit_show
 
 
+👉 Join TG for more Updates: [https://telegram.me/cryptogg](https://t.me/weekshit_show)
 
-
-
-
-
-
-
-* Fill this form if u have not rcvd the mail/invite code Yet- [Form](https://tinyurl.com/4435uukt)

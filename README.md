@@ -22,8 +22,11 @@
 
 # 🖥️ Device/System Requirements 
 
+* **4+CPU CORES**
+* **16GB RAMS**
+* **100+GB FREE SPACE OF SSD STORAGE**
+* **1GBPS+ NETWORK CONNECTION**
 
-![Screenshot 2025-05-17 004130](https://github.com/user-attachments/assets/d5dbeabf-d78b-4d0c-a9dc-bd4cf77c3162)
 
 
 # Pre-Requirements 🛠
